@@ -120,7 +120,7 @@ class _SetupQuizScreenState extends State<SetupQuizScreen> {
           const Center(child: AppLogo(size: 56)),
           const SizedBox(height: 20),
           DropdownButtonFormField<String>(
-            initialValue: _board,
+            value: _board,
             decoration: const InputDecoration(labelText: 'Board'),
             items: AppConstants.boards
                 .map((b) => DropdownMenuItem(value: b, child: Text(b)))
@@ -129,7 +129,7 @@ class _SetupQuizScreenState extends State<SetupQuizScreen> {
           ),
           const SizedBox(height: 12),
           DropdownButtonFormField<String>(
-            initialValue: _classLevel,
+            value: _classLevel,
             decoration: const InputDecoration(labelText: 'Class'),
             items: AppConstants.classLevels
                 .map((c) => DropdownMenuItem(value: c, child: Text(c)))
@@ -138,7 +138,7 @@ class _SetupQuizScreenState extends State<SetupQuizScreen> {
           ),
           const SizedBox(height: 12),
           DropdownButtonFormField<String>(
-            initialValue: _subject,
+            value: _subject,
             decoration: const InputDecoration(labelText: 'Subject'),
             items: AppConstants.subjects
                 .map((s) => DropdownMenuItem(value: s, child: Text(s)))
