@@ -18,6 +18,11 @@ jobs:
           channel: 'stable'
           cache: true
       - run: flutter pub get
+      - name: Create local.properties
+        run: |
+          echo "flutter.sdk=$FLUTTER_ROOT" > android/local.properties
+          echo "sdk.dir=$ANDROID_HOME" >> android/local.properties
+          cat android/local.properties
       - run: flutter build apk --debug
       - uses: actions/upload-artifact@v4
         with:
