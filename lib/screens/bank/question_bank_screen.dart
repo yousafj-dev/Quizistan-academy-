@@ -239,7 +239,7 @@ class _QuestionBankScreenState extends State<QuestionBankScreen> {
                       decoration: InputDecoration(
                           labelText: 'Option ${'ABCD'[i]} *')),
                 DropdownButtonFormField<int>(
-                  initialValue: correctIndex,
+                  value: correctIndex,
                   decoration:
                       const InputDecoration(labelText: 'Sahi jawab'),
                   items: List.generate(
@@ -259,7 +259,7 @@ class _QuestionBankScreenState extends State<QuestionBankScreen> {
                     decoration:
                         const InputDecoration(labelText: 'Chapter')),
                 DropdownButtonFormField<String>(
-                  initialValue: board,
+                  value: board,
                   decoration: const InputDecoration(labelText: 'Board'),
                   items: AppConstants.boards
                       .map((b) =>
@@ -270,7 +270,7 @@ class _QuestionBankScreenState extends State<QuestionBankScreen> {
                   }),
                 ),
                 DropdownButtonFormField<String>(
-                  initialValue: classLevel,
+                  value: classLevel,
                   decoration: const InputDecoration(labelText: 'Class'),
                   items: AppConstants.classLevels
                       .map((c) =>
@@ -281,7 +281,7 @@ class _QuestionBankScreenState extends State<QuestionBankScreen> {
                   }),
                 ),
                 DropdownButtonFormField<String>(
-                  initialValue: subject,
+                  value: subject,
                   decoration:
                       const InputDecoration(labelText: 'Subject'),
                   items: AppConstants.subjects
