@@ -123,7 +123,7 @@ class _LiveRoomHostScreenState extends State<LiveRoomHostScreen> {
   Widget _drop(String label, String value, List<String> items,
       ValueChanged<String?> onChanged) {
     return DropdownButtonFormField<String>(
-      initialValue: value,
+      value: value,
       decoration: InputDecoration(labelText: label),
       items:
           items.map((s) => DropdownMenuItem(value: s, child: Text(s))).toList(),
