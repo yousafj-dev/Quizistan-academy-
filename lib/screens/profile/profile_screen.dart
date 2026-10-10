@@ -296,7 +296,7 @@ class _ProfileFormState extends State<_ProfileForm> {
               ),
               const SizedBox(height: 16),
               DropdownButtonFormField<String>(
-                initialValue: _role,
+                value: _role,
                 decoration: const InputDecoration(
                   labelText: 'Aap kaun hain?',
                   border: OutlineInputBorder(),
@@ -306,7 +306,7 @@ class _ProfileFormState extends State<_ProfileForm> {
               ),
               const SizedBox(height: 16),
               DropdownButtonFormField<String>(
-                initialValue: _board,
+                value: _board,
                 decoration: const InputDecoration(
                   labelText: 'Board',
                   border: OutlineInputBorder(),
@@ -316,7 +316,7 @@ class _ProfileFormState extends State<_ProfileForm> {
               ),
               const SizedBox(height: 16),
               DropdownButtonFormField<String>(
-                initialValue: _classLevel,
+                value: _classLevel,
                 decoration: const InputDecoration(
                   labelText: 'Class',
                   border: OutlineInputBorder(),
