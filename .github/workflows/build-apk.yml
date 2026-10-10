@@ -1,10 +1,5 @@
 name: Build Quizistan APK
 
-# Push-based route: full Flutter source lives at the repo root.
-# On every push to main, builds a release APK on GitHub's servers and
-# publishes it as a Release so it can be downloaded as a plain .apk
-# on a phone (no artifact/zip handling needed).
-
 on:
   push:
     branches: [ main ]
@@ -29,7 +24,6 @@ jobs:
           channel: 'stable'
 
       - name: Build release APK
-        working-directory: quizistan-app
         run: |
           rm -f android/local.properties
           flutter pub get
@@ -45,4 +39,4 @@ jobs:
             Install steps: uninstall the old Quizistan app first
             (Settings > Apps > Quizistan Academy > Uninstall),
             then install this APK. Login needs Firebase (coming next).
-          files: quizistan-app/build/app/outputs/flutter-apk/app-release.apk
+          files: build/app/outputs/flutter-apk/app-release.apk
