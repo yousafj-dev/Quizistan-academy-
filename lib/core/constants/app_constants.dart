@@ -15,7 +15,7 @@ class AppConstants {
     'Bahawalpur',
   ];
 
-  static const List<String> classLevels = ['9', '10', '11', '12'];
+  static const List<String> classLevels = ['9', '10', '11', '12', 'PPSC'];
 
   static const List<String> subjects = [
     'Urdu',
@@ -28,6 +28,10 @@ class AppConstants {
     'Islamiat',
     'Pak Studies',
     'Tarjuma-tul-Quran',
+    'General Knowledge',
+    'Pakistan Affairs',
+    'Current Affairs',
+    'Everyday Science',
   ];
 
   static const int defaultQuestionCount = 10;
