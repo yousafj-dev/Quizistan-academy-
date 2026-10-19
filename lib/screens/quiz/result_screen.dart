@@ -5,15 +5,31 @@ import 'package:quizistan_academy/core/theme/app_theme.dart';
 import 'package:quizistan_academy/models/quiz_result.dart';
 import 'package:quizistan_academy/screens/home/home_screen.dart';
 import 'package:quizistan_academy/screens/quiz/quiz_screen.dart';
+import 'package:quizistan_academy/services/ad_service.dart';
 import 'package:quizistan_academy/services/quiz_engine.dart';
 
-class ResultScreen extends StatelessWidget {
+class ResultScreen extends StatefulWidget {
   const ResultScreen({super.key, required this.result});
 
   final QuizResult result;
 
   @override
+  State<ResultScreen> createState() => _ResultScreenState();
+}
+
+class _ResultScreenState extends State<ResultScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Quiz khatam hone par poori screen ka ad (zyada se zyada 3 min me 1 baar)
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      AdService.instance.showInterstitialIfDue();
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final result = widget.result;
     final mistakes = result.mistakes;
 
     return Scaffold(
